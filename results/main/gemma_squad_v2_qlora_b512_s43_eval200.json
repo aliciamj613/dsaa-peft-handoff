@@ -1,0 +1,1609 @@
+{
+  "em": 0.42,
+  "f1": 0.5069449620427883,
+  "n": 200,
+  "batch_size": 4,
+  "max_new_tokens": 32,
+  "predictions": [
+    {
+      "id": "56ddde6b9a695914005b9628",
+      "question": "In what country is Normandy located?",
+      "gold_answer": "France",
+      "prediction_text": "France",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56ddde6b9a695914005b9629",
+      "question": "When were the Normans in Normandy?",
+      "gold_answer": "10th and 11th centuries",
+      "prediction_text": "10th and 11th centuries.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56ddde6b9a695914005b962a",
+      "question": "From which countries did the Norse originate?",
+      "gold_answer": "Denmark, Iceland and Norway",
+      "prediction_text": "Denmark, Iceland and Norway.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56ddde6b9a695914005b962b",
+      "question": "Who was the Norse leader?",
+      "gold_answer": "Rollo",
+      "prediction_text": "Rollo.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56ddde6b9a695914005b962c",
+      "question": "What century did the Normans first gain their separate identity?",
+      "gold_answer": "10th century",
+      "prediction_text": "first half of the 10th century.",
+      "em": 0,
+      "f1": 0.5714285714285715
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d1",
+      "question": "Who gave their name to Normandy in the 1000's and 1100's",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Norsemen.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d2",
+      "question": "What is France a region of?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Normandy.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d3",
+      "question": "Who did King Charles III swear fealty to?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Norsemen.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad39d53604f3c001a3fe8d4",
+      "question": "When did the Frankish identity emerge?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56dddf4066d3e219004dad5f",
+      "question": "Who was the duke in the battle of Hastings?",
+      "gold_answer": "William the Conqueror",
+      "prediction_text": "William the Conqueror.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56dddf4066d3e219004dad60",
+      "question": "Who ruled the duchy of Normandy",
+      "gold_answer": "Richard I",
+      "prediction_text": "Richard I of Normandy.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "56dddf4066d3e219004dad61",
+      "question": "What religion were the Normans",
+      "gold_answer": "Catholic",
+      "prediction_text": "Catholic orthodoxy.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea27",
+      "question": "What type of major impact did the Norman dynasty have on modern Europe?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea28",
+      "question": "Who was famed for their Christian spirit?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "The Normans were famed for their martial spirit and eventually for their Christian piety, becoming exponents of the Catholic orthodoxy into which they assimilated. They adopted the Gallo-",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea29",
+      "question": "Who assimilted the Roman language?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "The Normans.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea2a",
+      "question": "Who ruled the country of Normandy?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Richard I of Normandy.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3a266604f3c001a3fea2b",
+      "question": "What principality did William the conquerer found?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "England.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56dde0379a695914005b9636",
+      "question": "What is the original meaning of the word Norman?",
+      "gold_answer": "Viking",
+      "prediction_text": "Northman or Viking.",
+      "em": 0,
+      "f1": 0.5
+    },
+    {
+      "id": "56dde0379a695914005b9637",
+      "question": "When was the Latin version of the word Norman first recorded?",
+      "gold_answer": "9th century",
+      "prediction_text": "9th century.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3ab70604f3c001a3feb89",
+      "question": "What name comes from the English words Normans/Normanz?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "French words Normans/Normanz.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ab70604f3c001a3feb8a",
+      "question": "When was the French version of the word Norman first recorded?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "9th century.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56dde0ba66d3e219004dad75",
+      "question": "When was the Duchy of Normandy founded?",
+      "gold_answer": "911",
+      "prediction_text": "911.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56dde0ba66d3e219004dad76",
+      "question": "Who did Rollo sign the treaty of Saint-Clair-sur-Epte with?",
+      "gold_answer": "King Charles III",
+      "prediction_text": "King Charles III of West Francia.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "56dde0ba66d3e219004dad77",
+      "question": "What river originally bounded the Duchy",
+      "gold_answer": "Seine",
+      "prediction_text": "Epte river.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec0d",
+      "question": "when did Nors encampments ivolve into destructive incursions?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec0e",
+      "question": "What treaty was established in the 9th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Treaty of Saint-Clair-sur-Epte.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec0f",
+      "question": "Who established a treaty with King Charles the third of France?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Rollo, the famed Viking ruler.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ad61604f3c001a3fec10",
+      "question": "What did the French promises to protect Rollo and his men from?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "further Viking incursions.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56dde1d966d3e219004dad8d",
+      "question": "Who upon arriving gave the original viking settlers a common identity?",
+      "gold_answer": "Rollo",
+      "prediction_text": "Rollo's contingents.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ae14604f3c001a3fec39",
+      "question": "When did Rollo begin to arrive in Normandy?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "880s.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ae14604f3c001a3fec3a",
+      "question": "What Viking groups were conquered by Rollo?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56dde27d9a695914005b9651",
+      "question": "What was the Norman religion?",
+      "gold_answer": "Catholicism",
+      "prediction_text": "Catholicism (Christianity) and the Gallo-Romance language of the local people.",
+      "em": 0,
+      "f1": 0.2222222222222222
+    },
+    {
+      "id": "56dde27d9a695914005b9652",
+      "question": "What part of France were the Normans located?",
+      "gold_answer": "north",
+      "prediction_text": "north of France.",
+      "em": 0,
+      "f1": 0.5
+    },
+    {
+      "id": "5ad3af11604f3c001a3fec63",
+      "question": "What was replace with the Norse religion?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Catholicism (Christianity) and the Gallo-Romance language of the local people.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3af11604f3c001a3fec64",
+      "question": "What did maternal Old Norse traditions merge with?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Catholicism (Christianity) and the Gallo-Romance language of the local people.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3af11604f3c001a3fec65",
+      "question": "What language replaced the Gallo-Romance language?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Old Norse language and Catholicism (Christianity) and the Gallo-Romance language of the local people.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56dde2fa66d3e219004dad9b",
+      "question": "What was one of the Norman's major exports?",
+      "gold_answer": "fighting horsemen",
+      "prediction_text": "fighting horsemen.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3c626604f3c001a3ff011",
+      "question": "Who adopted the fuedel doctrines of the Normans?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "the rest of France.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3c626604f3c001a3ff012",
+      "question": "What was one of the Norman's major imports?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "fighting horsemen.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3c626604f3c001a3ff013",
+      "question": "Who's arristocracy eventually served as avid Crusaders?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Normans of Italy, France and England.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de0f6a4396321400ee257f",
+      "question": "Who was the Normans' main enemy in Italy, the Byzantine Empire and Armenia?",
+      "gold_answer": "Seljuk Turks",
+      "prediction_text": "unanswerable",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3e9",
+      "question": "Who entered Italy soon after the Byzantine Empire?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Normans.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3ea",
+      "question": "Who did the Normans fight in Italy?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Pechenegs, Bulgars, and especially the Seljuk Turks.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3eb",
+      "question": "Who did the Normans encourage to come to the south?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Lombards.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3dbc6604f3c001a3ff3ec",
+      "question": "During what campaign did the Vargian and Lombard fight?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "1038–40.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de0ffd4396321400ee258d",
+      "question": "When did Herve serve as a Byzantine general?",
+      "gold_answer": "1050s",
+      "prediction_text": "1050s.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de0ffd4396321400ee258e",
+      "question": "When did Robert Crispin go up against the Turks?",
+      "gold_answer": "1060s",
+      "prediction_text": "in the 1060s.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "56de0ffd4396321400ee258f",
+      "question": "Who ruined Roussel de Bailleul's plans for an independent state?",
+      "gold_answer": "Alexius Komnenos",
+      "prediction_text": "Alexius Komnenos.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff467",
+      "question": "Who was the first Byzantine mercenary to serve with the Normans?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Hervé.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff468",
+      "question": "When did Herve serve as a Norman general?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "1050s.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff469",
+      "question": "Who ruined Alexius Komnenos plans for an independent state?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Roussel de Bailleul.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3de8b604f3c001a3ff46a",
+      "question": "When did Herve go up against the Turks?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "in the 1050s.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de10b44396321400ee2593",
+      "question": "What was the name of the Norman castle?",
+      "gold_answer": "Afranji",
+      "prediction_text": "Afranji, meaning \"Franks.\"",
+      "em": 0,
+      "f1": 0.5
+    },
+    {
+      "id": "56de10b44396321400ee2594",
+      "question": "Who was the leader when the Franks entered the Euphrates valley?",
+      "gold_answer": "Oursel",
+      "prediction_text": "Oursel.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de10b44396321400ee2595",
+      "question": "Who did the Normans team up with in Anatolia?",
+      "gold_answer": "Turkish forces",
+      "prediction_text": "Turkish forces.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff689",
+      "question": "Who joined Norman forces in the destruction of the Armenians?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Turkish forces.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff68a",
+      "question": "Who did the Turks take up service with?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Armenian state further south in Cilicia and the Taurus Mountains.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff68b",
+      "question": "What Frank led Norman forces?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Oursel.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3e96b604f3c001a3ff68c",
+      "question": "Where did Oursel lead the Franks?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "upper Euphrates valley in northern Syria.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de11154396321400ee25aa",
+      "question": "What were the origins of the Raouliii family?",
+      "gold_answer": "Norman mercenary",
+      "prediction_text": "Italo-Norman named Raoul.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ea79604f3c001a3ff6e9",
+      "question": "Where were several Norman mercenary familes originate from?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "western Europe",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ea79604f3c001a3ff6ea",
+      "question": "Who did the Normans serve under in the 10th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "George Maniaces in the Sicilian expedition of 1038.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ea79604f3c001a3ff6eb",
+      "question": "What expedition did George Maniaces lead in the 10th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Sicilian expedition of 1038.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de148dcffd8e1900b4b5bc",
+      "question": "What was the name of the count of Apulia",
+      "gold_answer": "Robert Guiscard",
+      "prediction_text": "Robert Guiscard. Robert Guiscard, an other Norman adventurer previously elevated to the dignity of count of Apulia as the result of his military successes,",
+      "em": 0,
+      "f1": 0.17391304347826084
+    },
+    {
+      "id": "56de148dcffd8e1900b4b5bd",
+      "question": "When did Dyrrachium  fall to the Normans?",
+      "gold_answer": "1082",
+      "prediction_text": "February 1082.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "56de148dcffd8e1900b4b5be",
+      "question": "How many men were in Robert's army?",
+      "gold_answer": "30,000",
+      "prediction_text": "30,000 men",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff799",
+      "question": "Who ultimatly drove the Byzantines out of Europe?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Robert Guiscard. Robert Guiscard, an other Norman adventurer previously elevated to the dignity of count of Apulia as the result of his military successes,",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff79a",
+      "question": "What pope opposed Roberts campaign?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff79b",
+      "question": "What fell to the Normans in the 10th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Dyrrachium, Valona, and Butrint.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ed26604f3c001a3ff79c",
+      "question": "How many men did Roberts army face?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "30,000 men",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de15104396321400ee25b7",
+      "question": "Where did the Normans and Byzantines sign the peace treaty?",
+      "gold_answer": "Deabolis",
+      "prediction_text": "Deabolis.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de15104396321400ee25b8",
+      "question": "Who was Robert's son?",
+      "gold_answer": "Bohemond",
+      "prediction_text": "Bohemond.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de15104396321400ee25b9",
+      "question": "What river was Petrela located by?",
+      "gold_answer": "Deabolis",
+      "prediction_text": "Deabolis",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3ee2d604f3c001a3ff7e1",
+      "question": "Who did the Normans besiege in the 11th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Dyrrachium.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ee2d604f3c001a3ff7e2",
+      "question": "Who did Robert lead agains Dyrrachium in 1107?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Normans under the command of Bohemond. Robert's son.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ee2d604f3c001a3ff7e3",
+      "question": "Who was Bohemond's son?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Robert's son.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de1563cffd8e1900b4b5c2",
+      "question": "When did the Normans attack Dyrrachium?",
+      "gold_answer": "1185",
+      "prediction_text": "1185.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de1563cffd8e1900b4b5c3",
+      "question": "What was the naval base called?",
+      "gold_answer": "Dyrrachium",
+      "prediction_text": "Dyrrachium.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de1563cffd8e1900b4b5c4",
+      "question": "Where was Dyrrachium located?",
+      "gold_answer": "the Adriatic",
+      "prediction_text": "Adriatic.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f028604f3c001a3ff823",
+      "question": "Who attacked Dyrrachium in the 11th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f028604f3c001a3ff824",
+      "question": "Who betrayed the Normans?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f028604f3c001a3ff825",
+      "question": "What naval base fell to the Normans?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Dyrrachium.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5c8",
+      "question": "Who did Emma Marry?",
+      "gold_answer": "King Ethelred II",
+      "prediction_text": "King Ethelred II of England.",
+      "em": 0,
+      "f1": 0.7499999999999999
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5c9",
+      "question": "Who was Emma's brother?",
+      "gold_answer": "Duke Richard II",
+      "prediction_text": "Richard II of Normandy.",
+      "em": 0,
+      "f1": 0.5714285714285715
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5ca",
+      "question": "To where did Ethelred flee?",
+      "gold_answer": "Normandy",
+      "prediction_text": "Normandy.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de15dbcffd8e1900b4b5cb",
+      "question": "Who kicked Ethelred out?",
+      "gold_answer": "Sweyn Forkbeard",
+      "prediction_text": "Sweyn Forkbeard.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f187604f3c001a3ff86f",
+      "question": "Who married Cnut the Great?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f187604f3c001a3ff870",
+      "question": "When did Richard II flee to Normandy?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "1013.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3f187604f3c001a3ff871",
+      "question": "Who's major ports were controlled by the English?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de1645cffd8e1900b4b5d0",
+      "question": "Who was Edward the Confessor's half-brother?",
+      "gold_answer": "Harthacnut",
+      "prediction_text": "Harthacnut.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de1645cffd8e1900b4b5d1",
+      "question": "When did Edward return?",
+      "gold_answer": "1041",
+      "prediction_text": "1041.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de1645cffd8e1900b4b5d2",
+      "question": "Who did Edward make archbishop of Canterbury?",
+      "gold_answer": "Robert of Jumièges",
+      "prediction_text": "Robert of Jumièges.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f350604f3c001a3ff8ef",
+      "question": "When did Edward the Confessor's son return from his fathers refuge?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "1041",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3f350604f3c001a3ff8f0",
+      "question": "What kind of force did Harthacnut establish?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f350604f3c001a3ff8f1",
+      "question": "Who made Robert of Jumieges earl of Hereford?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Edward the Confessor.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de16ca4396321400ee25c5",
+      "question": "Where did Harold II die?",
+      "gold_answer": "Battle of Hastings",
+      "prediction_text": "Battle of Hastings.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de16ca4396321400ee25c6",
+      "question": "Who killed Harold II?",
+      "gold_answer": "William II",
+      "prediction_text": "Duke William II of Normandy.",
+      "em": 0,
+      "f1": 0.5714285714285715
+    },
+    {
+      "id": "56de16ca4396321400ee25c7",
+      "question": "When was the Battle of Hastings?",
+      "gold_answer": "1066",
+      "prediction_text": "1066",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de16ca4396321400ee25c8",
+      "question": "Who was the ruling class ahead of the Normans?",
+      "gold_answer": "Anglo-Saxons",
+      "prediction_text": "Anglo-Saxons.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff951",
+      "question": "When did King Harold II conquer England?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff952",
+      "question": "What battle took place in the 10th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff953",
+      "question": "Who replaced the Normans as the ruling class?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Anglo-Saxons.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3f4b1604f3c001a3ff954",
+      "question": "Who considered their land on the continent their most important holding?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Early Norman kings of England.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de1728cffd8e1900b4b5d7",
+      "question": "What was the Anglo-Norman language's final form?",
+      "gold_answer": "Modern English",
+      "prediction_text": "Modern English.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f5b0604f3c001a3ff9ab",
+      "question": "Who identified themselves as French during the Hundred Years War?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f5b0604f3c001a3ff9ac",
+      "question": "What was absorbed into the Anglo-Norman language?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Anglo-Saxon language.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3f5b0604f3c001a3ff9ad",
+      "question": "Who made fun of the Latin language?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Geoffrey Chaucer.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de179dcffd8e1900b4b5da",
+      "question": "In what year did the Norman's invade at Bannow Bay?",
+      "gold_answer": "1169",
+      "prediction_text": "1169",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de179dcffd8e1900b4b5db",
+      "question": "What country did the Normans invade in 1169?",
+      "gold_answer": "Ireland",
+      "prediction_text": "Ireland.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de179dcffd8e1900b4b5dc",
+      "question": "What culture did the Normans combine with in Ireland?",
+      "gold_answer": "Irish",
+      "prediction_text": "Irish culture and history.",
+      "em": 0,
+      "f1": 0.4
+    },
+    {
+      "id": "5ad3f6f5604f3c001a3ffa09",
+      "question": "Where did the Normans invade in the 11th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Bannow Bay.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3f6f5604f3c001a3ffa0a",
+      "question": "Who did the Irish culture have a profound effect on?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "The Normans.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3f6f5604f3c001a3ffa0b",
+      "question": "What castles were built by the Irish?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e0",
+      "question": "Who was Margaret's brother?",
+      "gold_answer": "Edgar",
+      "prediction_text": "Edgar Atheling.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e1",
+      "question": "Who was Margaret's husband?",
+      "gold_answer": "King Malcolm III of Scotland",
+      "prediction_text": "Edgar Atheling.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e2",
+      "question": "When was Scotland invaded by William?",
+      "gold_answer": "1072",
+      "prediction_text": "1072.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de17f9cffd8e1900b4b5e3",
+      "question": "Who was the hostage?",
+      "gold_answer": "Duncan",
+      "prediction_text": "Duncan.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3f7ac604f3c001a3ffa3b",
+      "question": "Who did Edgar marry?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Margaret, Malcolm III's sister.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3f7ac604f3c001a3ffa3c",
+      "question": "Who invaded Scotland in the 10th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "William the Conqueror.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3f7ac604f3c001a3ffa3d",
+      "question": "Who did the Scotish king take hostage?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Duncan of Scotland.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de3cd0cffd8e1900b4b6be",
+      "question": "Who did Alexander I marry?",
+      "gold_answer": "Sybilla of Normandy",
+      "prediction_text": "Sybilla of Normandy.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de3cd0cffd8e1900b4b6bf",
+      "question": "What culture's arrival in Scotland is know as the \"Davidian Revolution\"?",
+      "gold_answer": "Norman",
+      "prediction_text": "Norman culture.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "5ad3f8d2604f3c001a3ffa8d",
+      "question": "Who did King David I of Scotland Marry?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Sybilla of Normandy.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3f8d2604f3c001a3ffa8e",
+      "question": "What did Sybilla of Normandy introduce to Scotland?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Norman culture.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de3d594396321400ee26ca",
+      "question": "Where was Ralph earl of?",
+      "gold_answer": "Hereford",
+      "prediction_text": "Hereford and Wales.",
+      "em": 0,
+      "f1": 0.5
+    },
+    {
+      "id": "56de3d594396321400ee26cb",
+      "question": "Who was Ralph in charge of being at war with?",
+      "gold_answer": "the Welsh",
+      "prediction_text": "Welsh.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de3d594396321400ee26cc",
+      "question": "Who made Ralph earl?",
+      "gold_answer": "Edward the Confessor",
+      "prediction_text": "Edward the Confessor.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3fb01604f3c001a3ffb35",
+      "question": "Who came into contact with Wales after the conquest of England?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3fb01604f3c001a3ffb36",
+      "question": "Who made Edward the Confessor Earl?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Ralph.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de3dbacffd8e1900b4b6d2",
+      "question": "What country was under the control of Norman barons?",
+      "gold_answer": "Wales",
+      "prediction_text": "Marches came completely under the dominance of William's most trusted Norman barons.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3fb6e604f3c001a3ffb5f",
+      "question": "What came under Williams dominace before the conquest?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3fb6e604f3c001a3ffb60",
+      "question": "What Welsh lords did William conquer?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de3e414396321400ee26d8",
+      "question": "What year did Roger de Tosny fail to accomplish what he set out to do?",
+      "gold_answer": "1018",
+      "prediction_text": "1018.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de3e414396321400ee26d9",
+      "question": "Who was in charge of the papal army in the War of Barbastro?",
+      "gold_answer": "William of Montreuil",
+      "prediction_text": "William of Montreuil.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb8f",
+      "question": "Where did the Normans carve out a principality before the First Crusade?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Antioch.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb90",
+      "question": "What did the Normans take part in in the 10th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "religious wars.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb91",
+      "question": "Who carved out a state for himself from Moorish lands?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Roger de Tosny.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3fc41604f3c001a3ffb92",
+      "question": "What war occured in the 1oth century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "War of Barbastro.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de3ebc4396321400ee26e6",
+      "question": "When did the Siege of Antioch take place?",
+      "gold_answer": "1097",
+      "prediction_text": "1097",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de3ebc4396321400ee26e7",
+      "question": "What was the name of Bohemond's nephew?",
+      "gold_answer": "Tancred",
+      "prediction_text": "Tancred.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de3ebc4396321400ee26e8",
+      "question": "What major conquest did Tancred play a roll in?",
+      "gold_answer": "Jerusalem",
+      "prediction_text": "conquest of Jerusalem and he worked for the expansion of the Crusader kingdom in Transjordan and the region of Galilee.",
+      "em": 0,
+      "f1": 0.1111111111111111
+    },
+    {
+      "id": "5ad4017a604f3c001a3ffd1f",
+      "question": "When did Tancred lay siege to Antioch?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad4017a604f3c001a3ffd20",
+      "question": "What was the name of Tancred's nephew?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Bohemond of Taranto.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de3efccffd8e1900b4b6fe",
+      "question": "How long did Western Europe control Cyprus?",
+      "gold_answer": "380 years",
+      "prediction_text": "380 years.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad401f2604f3c001a3ffd41",
+      "question": "Who defeated Anglo-Norman forces during the third Crusade?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad401f2604f3c001a3ffd42",
+      "question": "Who dominated Western Europe for 380 years?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Anglo-Norman forces.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de3f784396321400ee26fa",
+      "question": "What ruined Richard's plans to reach Acre?",
+      "gold_answer": "a storm",
+      "prediction_text": "a storm dispersed the fleet.",
+      "em": 0,
+      "f1": 0.5
+    },
+    {
+      "id": "56de3f784396321400ee26fb",
+      "question": "Who was Richard's fiancee?",
+      "gold_answer": "Berengaria",
+      "prediction_text": "Berengaria",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de3f784396321400ee26fc",
+      "question": "What year did the storm hit Richard's fleet?",
+      "gold_answer": "1191",
+      "prediction_text": "1191",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de3f784396321400ee26fd",
+      "question": "Who ruled Cyprus in 1191?",
+      "gold_answer": "Isaac Komnenos",
+      "prediction_text": "Isaac Komnenos.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad40280604f3c001a3ffd57",
+      "question": "Who left Messina in the 11th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Richard the Lion-hearted.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad40280604f3c001a3ffd58",
+      "question": "What year did Richards fleet avoid a storm?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad40280604f3c001a3ffd59",
+      "question": "Who ruled Cyprus in the 11th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Isaac Komnenos.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de40da4396321400ee2708",
+      "question": "Who was Guy's Rival?",
+      "gold_answer": "Conrad of Montferrat",
+      "prediction_text": "Conrad of Montferrat.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de40da4396321400ee2709",
+      "question": "What were Isaac's chains made out of?",
+      "gold_answer": "silver",
+      "prediction_text": "silver chains.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "56de40da4396321400ee270a",
+      "question": "Who led Richard's troops when Cyprus was conquered?",
+      "gold_answer": "Guy de Lusignan",
+      "prediction_text": "Guy de Lusignan.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad404a6604f3c001a3ffde1",
+      "question": "Who's chains were made out of copper?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad404a6604f3c001a3ffde2",
+      "question": "Who led Issacs troops to Cyprus?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Guy de Lusignan.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad404a6604f3c001a3ffde3",
+      "question": "Who offered Issac his daughter?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Richard de Lusignan.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de49564396321400ee277a",
+      "question": "What continent are the Canarian Islands off the coast of?",
+      "gold_answer": "Africa",
+      "prediction_text": "Africa.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad40419604f3c001a3ffdb7",
+      "question": "Who conquered the Canary Island in the 14th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Jean de Bethencourt and the Poitevine Gadifer de la Salle.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad40419604f3c001a3ffdb8",
+      "question": "What Islands are of the coast of Asia?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de49a8cffd8e1900b4b7a7",
+      "question": "Who became the King of the Canary Islands?",
+      "gold_answer": "Bethencourt",
+      "prediction_text": "Bethencourt took the title of King of the Canary Islands.",
+      "em": 0,
+      "f1": 0.2222222222222222
+    },
+    {
+      "id": "56de49a8cffd8e1900b4b7a8",
+      "question": "Who bought the rights?",
+      "gold_answer": "Enrique Pérez de Guzmán",
+      "prediction_text": "Enrique Pérez de Guzmán, 2nd Count de Niebla.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "56de49a8cffd8e1900b4b7a9",
+      "question": "Who sold the rights?",
+      "gold_answer": "Maciot de Bethencourt",
+      "prediction_text": "Maciot de Bethencourt.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad403c1604f3c001a3ffd97",
+      "question": "What title did Henry II take in the Canary Island?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "King of the Canary Islands.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad403c1604f3c001a3ffd98",
+      "question": "Who sold the rights to the island in the 14th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Maciot de Bethencourt.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de4a474396321400ee2786",
+      "question": "Where are Jersey and Guernsey",
+      "gold_answer": "Channel Islands",
+      "prediction_text": "Channel Islands in the Channel Islands.",
+      "em": 0,
+      "f1": 0.5714285714285715
+    },
+    {
+      "id": "56de4a474396321400ee2787",
+      "question": "How many customaries does Norman customary law have?",
+      "gold_answer": "two",
+      "prediction_text": "two",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad40358604f3c001a3ffd7d",
+      "question": "What Norman law wasdeveloped between 1000 and 1300?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "customary law of Normandy.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad40358604f3c001a3ffd7e",
+      "question": "What law has 3 customeries?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad40358604f3c001a3ffd7f",
+      "question": "What was authored in the 12th century?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "The Très ancien coutumier (Very ancient customary) was authored between 1200 and 1245.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de4a89cffd8e1900b4b7bd",
+      "question": "What is the Norman architecture idiom?",
+      "gold_answer": "Romanesque",
+      "prediction_text": "encastellation of these regions with keeps in their north French style fundamentally altered the military landscape.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de4a89cffd8e1900b4b7be",
+      "question": "What kind of arches does Norman architecture have?",
+      "gold_answer": "rounded",
+      "prediction_text": "rounded arches.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "5ad402ce604f3c001a3ffd67",
+      "question": "What type of arch did the Normans invent?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de4b074396321400ee2793",
+      "question": "What architecture type came after Norman in England?",
+      "gold_answer": "Early Gothic",
+      "prediction_text": "Early Gothic.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de4b074396321400ee2794",
+      "question": "What architecture type came before Norman in England?",
+      "gold_answer": "Anglo-Saxon",
+      "prediction_text": "Anglo-Saxon architecture.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "id": "56de4b074396321400ee2795",
+      "question": "What place had the Norman Arab architectural style?",
+      "gold_answer": "Sicily",
+      "prediction_text": "Kingdom of Sicily.",
+      "em": 0,
+      "f1": 0.5
+    },
+    {
+      "id": "5ad400b0604f3c001a3ffcdf",
+      "question": "What precedes the period of Anglo-Saxon architecture?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Norman architecture.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad400b0604f3c001a3ffce0",
+      "question": "What architecture type came after Early Gothic?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad400b0604f3c001a3ffce1",
+      "question": "Who incorperated Islamic, LOmbard, and Byzantine building techniques in England?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de4b5c4396321400ee2799",
+      "question": "When did the church reform begin?",
+      "gold_answer": "early 11th century",
+      "prediction_text": "In the early 11th century.",
+      "em": 0,
+      "f1": 0.8571428571428571
+    },
+    {
+      "id": "56de4b5c4396321400ee279a",
+      "question": "Who used the church to unify themselves?",
+      "gold_answer": "dukes",
+      "prediction_text": "the dukes of Normandy.",
+      "em": 0,
+      "f1": 0.5
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffca7",
+      "question": "What kind of art did the Normans have a rich tradition of?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffca8",
+      "question": "Who began a program of church reform in the 1100s",
+      "gold_answer": "unanswerable",
+      "prediction_text": "dukes.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffca9",
+      "question": "Who was divided by the church?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3ffd7604f3c001a3ffcaa",
+      "question": "Who experienced aa golden age in the 1100s and 1200s",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Normandy.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de4bb84396321400ee27a2",
+      "question": "When were the French wars of religion?",
+      "gold_answer": "16th century",
+      "prediction_text": "16th century",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3ff1b604f3c001a3ffc73",
+      "question": "What wars did France fight in the 1600s?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "French Wars of Religion and French Revolution.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3ff1b604f3c001a3ffc74",
+      "question": "What revolution was fought in the 1899's?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de4c324396321400ee27ab",
+      "question": "What kind of needlework was used in the creation of the Bayeux Tapestry?",
+      "gold_answer": "embroidery",
+      "prediction_text": "Embroidery.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de4c324396321400ee27ac",
+      "question": "What is Norman art's most well known piece?",
+      "gold_answer": "Bayeux Tapestry",
+      "prediction_text": "Bayeux Tapestry.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de4c324396321400ee27ad",
+      "question": "Who commissioned the Tapestry?",
+      "gold_answer": "Odo",
+      "prediction_text": "Odo, the Bishop of Bayeux and first Earl of Kent.",
+      "em": 0,
+      "f1": 0.19999999999999998
+    },
+    {
+      "id": "5ad3fe91604f3c001a3ffc47",
+      "question": "What is the oldest work of Norman art?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3fe91604f3c001a3ffc48",
+      "question": "Who commissioned Danish vikings to create the Bayeux Tapestry?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "56de51244396321400ee27ef",
+      "question": "What is the most important type of Norman art preserved in churches?",
+      "gold_answer": "mosaics",
+      "prediction_text": "mosaics.",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3fe0d604f3c001a3ffc1b",
+      "question": "How has British art survived in Normandy?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "unanswerable",
+      "em": 1,
+      "f1": 1.0
+    },
+    {
+      "id": "5ad3fe0d604f3c001a3ffc1c",
+      "question": "What is the most common form of Norman art in churches?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "mosaics.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "5ad3fe0d604f3c001a3ffc1d",
+      "question": "What was a centre of ivorywork in the 1100s?",
+      "gold_answer": "unanswerable",
+      "prediction_text": "Lombard Salerno.",
+      "em": 0,
+      "f1": 0.0
+    },
+    {
+      "id": "56de51c64396321400ee27f7",
+      "question": "In what century did important classical music developments occur in Normandy?",
+      "gold_answer": "11th",
+      "prediction_text": "11th century.",
+      "em": 0,
+      "f1": 0.6666666666666666
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# env
+.venv/
+venv/
+env/
+.env
+conda-meta/
+
+# system
+.DS_Store
+
+# logs / caches
+logs/
+*.log
+.cache/
+wandb/
+tmp/
+temp/
+
+# model artifacts
+outputs/
+outputs_72/
+results_backup/
+**/checkpoint-*/
+**/optimizer.pt
+**/scheduler.pt
+**/trainer_state.json
+**/rng_state.pth
+**/adapter_model.safetensors
+**/*.bin
+**/*.safetensors
+
+# debug / pilot leftovers
+results/main_debug/
+results/pilot/
+results/*debug*.json
+results/main_summary_144_best.csv
+
+# hugggingface / local model cache
+.huggingface/
