@@ -1,0 +1,7 @@
+run,em,f1,rougeL,n
+gemma_dialogsum,,,0.2506084249414645,200
+gemma_gsm8k,0.01,,,200
+gemma_squad_v2,0.475,0.5417539682539683,,200
+qwen_dialogsum,,,0.1875460120381746,200
+qwen_gsm8k,0.015,,,200
+qwen_squad_v2,0.0,0.10987504935724736,,200

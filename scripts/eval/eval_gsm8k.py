@@ -15,7 +15,7 @@ from peft import PeftModel
 def parse_args():
     p = argparse.ArgumentParser()
     p.add_argument("--base_model", type=str, required=True)
-    p.add_argument("--adapter_path", type=str, required=True)
+    p.add_argument("--adapter_path", type=str, default=None)
     p.add_argument("--test_file", type=str, required=True)
     p.add_argument("--output_file", type=str, required=True)
     p.add_argument("--max_new_tokens", type=int, default=64)
@@ -56,7 +56,8 @@ def main():
         dtype=torch.float16,
         device_map="auto",
     )
-    model = PeftModel.from_pretrained(model, args.adapter_path)
+    if args.adapter_path and str(args.adapter_path).lower() != "none":
+        model = PeftModel.from_pretrained(model, args.adapter_path)
     model.eval()
 
     ds = load_dataset("json", data_files=args.test_file)["train"]
