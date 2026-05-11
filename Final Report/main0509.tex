@@ -57,7 +57,7 @@ What is still missing in much of the literature is not evidence that PEFT works,
 
 \section{Methodology}
 
-Figure~\ref{fig:workflow} gives a one-page overview of the full pipeline used in this study. We treat the methodology as seven coordinated stages: (1) data collection and instruction-style pre-processing for the three target tasks; (2) selection of two medium-sized instruction-tuned backbones; (3) implementation of four PEFT families with their characteristic update structures; (4) a shared training configuration with method-specific knobs; (5) a $4 \times 2 \times 3 \times 3 \times 2 = 144$ training matrix plus six no-adaptation baselines, all logged with VRAM, wall-clock time, and trainable-parameter ratio; (6) task-performance and efficiency evaluation on a fixed 200-example evaluation slice per task; and (7) aggregation, ranking, and trade-off analysis. The subsections below describe each stage in detail.
+ Overview of the full pipeline used in this study is shown in Figure~\ref{fig:workflow}. We treat the methodology as seven coordinated stages: (1) data collection and instruction-style pre-processing for the three target tasks; (2) selection of two medium-sized instruction-tuned backbones; (3) implementation of four PEFT families with their characteristic update structures; (4) a shared training configuration with method-specific knobs; (5) a $4 \times 2 \times 3 \times 3 \times 2 = 144$ training matrix plus six no-adaptation baselines, all logged with VRAM, wall-clock time, and trainable-parameter ratio; (6) task-performance and efficiency evaluation on a fixed 200-example evaluation slice per task; and (7) aggregation, ranking, and trade-off analysis. The subsections below describe each stage in detail.
 
 \begin{figure}[H]
 \centering
@@ -229,7 +229,7 @@ These three metrics capture the key dimensions of the efficiency--performance tr
 We evaluate each PEFT configuration from two complementary perspectives: task performance and resource efficiency. All task metrics are computed on a fixed 200-example evaluation subset that is held out from training and shared across all methods to ensure direct comparability.
 
 \paragraph{Task performance metrics.}
-For GSM8K, we report Exact Match (EM), which requires the generated answer to exactly match the ground-truth numeric answer after normalization (stripping whitespace, commas, and currency symbols). For DialogSum, we report ROUGE-L \cite{lin2004rouge}, the F1 score based on the longest common subsequence between the generated summary and the reference summary, which captures both precision and recall of salient content. For SQuAD v2, we report both EM and token-level F1 following the official evaluation script, which accounts for both answerable and unanswerable questions by assigning zero credit when the model fails to predict ``no answer'' for unanswerable instances.
+For GSM8K, we report Exact Match (EM), which requires the generated answer to exactly match the ground-truth numeric answer after normalization (stripping whitespace, commas, and currency symbols). For DialogSum, we report ROUGE-L \cite{lin2004rouge}, the F1 score based on the longest common subsequence between the generated summary and the reference summary, which captures both precision and recall of salient content. For SQuAD v2, we report token-level F1 following the official evaluation script, which accounts for both answerable and unanswerable questions by assigning zero credit when the model fails to predict ``no answer'' for unanswerable instances.
 
 \paragraph{Resource efficiency metrics.}
 We report three resource metrics. Peak GPU memory usage (GB) is the maximum VRAM allocated during training, including model parameters, gradients, and optimizer states. Training wall-clock time (minutes) measures the total time from the start of the first epoch to the end of the last, providing a practical measure of computational cost. Trainable parameter ratio is the fraction of total model parameters that receive gradient updates during training, reflecting the storage overhead of each adapter method.
@@ -703,28 +703,6 @@ Model & Method & 128 & 512 & 2048 \\
  & QLoRA & 0.0947 $\pm$ 0.0003 & 0.0722 $\pm$ 0.0167 & 0.0729 $\pm$ 0.0110 \\
  & DoRA & 0.0971 $\pm$ 0.0013 & 0.0918 $\pm$ 0.0136 & 0.0920 $\pm$ 0.0031 \\
  & IA3 & 0.0918 $\pm$ 0.0010 & 0.0894 $\pm$ 0.0001 & 0.0853 $\pm$ 0.0008 \\
-\bottomrule
-\end{tabular}
-\end{table}
-
-\begin{table}[H]
-\centering
-\small
-\caption{SQuAD v2 EM (mean $\pm$ std over two seeds).}
-\label{tab:appendix_squad_em}
-\begin{tabular}{llccc}
-\toprule
-Model & Method & 128 & 512 & 2048 \\
-\midrule
-\multirow{4}{*}{Gemma-2-2B-it} & LoRA & 0.2225 $\pm$ 0.0460 & 0.5150 $\pm$ 0.0283 & 0.4475 $\pm$ 0.0177 \\
- & QLoRA & 0.3975 $\pm$ 0.0177 & 0.4150 $\pm$ 0.0071 & 0.4075 $\pm$ 0.0318 \\
- & DoRA & 0.3100 $\pm$ 0.0141 & 0.4600 $\pm$ 0.0283 & 0.4750 $\pm$ 0.0283 \\
- & IA3 & 0.4825 $\pm$ 0.0035 & 0.4850 $\pm$ 0.0000 & 0.4625 $\pm$ 0.0035 \\
-\midrule
-\multirow{4}{*}{Qwen2.5-3B-Instruct} & LoRA & 0.0000 $\pm$ 0.0000 & 0.0000 $\pm$ 0.0000 & 0.0000 $\pm$ 0.0000 \\
- & QLoRA & 0.0000 $\pm$ 0.0000 & 0.0000 $\pm$ 0.0000 & 0.0000 $\pm$ 0.0000 \\
- & DoRA & 0.0000 $\pm$ 0.0000 & 0.0000 $\pm$ 0.0000 & 0.0000 $\pm$ 0.0000 \\
- & IA3 & 0.0000 $\pm$ 0.0000 & 0.0000 $\pm$ 0.0000 & 0.0000 $\pm$ 0.0000 \\
 \bottomrule
 \end{tabular}
 \end{table}
