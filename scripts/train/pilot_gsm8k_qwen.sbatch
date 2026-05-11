@@ -1,4 +1,8 @@
 #!/bin/bash
+# Pilot LR sweep for Qwen on GSM8K at budget=512. Uses a SLURM array job
+# (8 tasks) where each array index picks one (METHOD, LR) configuration from
+# CONFIGS. Result: 8 fine-tuned adapters + per-run eval/meta JSON files so
+# we can pick the best LR per PEFT method for the main sweep.
 #SBATCH -J peft_pilot_qwen_gsm8k
 #SBATCH -p long_gpu 
 #SBATCH --gres=gpu:1

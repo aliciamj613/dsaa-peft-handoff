@@ -1,3 +1,8 @@
+"""Aggregate per-run *_meta.json files produced by the main experiments into
+a single flat CSV that can be loaded into pandas / a spreadsheet for plotting
+and ranking. One row per run; columns include the chosen "main metric" so the
+table can be sorted directly without re-deriving it downstream."""
+
 import os
 import json
 import glob
@@ -37,7 +42,8 @@ for fp in files:
     rougeL = evals.get("rougeL")
     n = evals.get("n")
 
-    # 统一一个主指标列，方便后续画图/排序
+    # Normalize a single "main metric" per task so downstream plotting / ranking
+    # can use one column regardless of which task the row belongs to.
     if task == "gsm8k":
         main_metric = em
         main_metric_name = "em"
@@ -45,6 +51,7 @@ for fp in files:
         main_metric = rougeL
         main_metric_name = "rougeL"
     elif task == "squad_v2":
+        # Prefer F1 for SQuAD v2; fall back to EM if F1 is missing.
         main_metric = f1 if f1 is not None else em
         main_metric_name = "f1"
     else:
@@ -72,6 +79,7 @@ for fp in files:
         fp,
     ])
 
+# Group rows by (model_tag, task, method, budget, seed) for stable ordering.
 rows.sort(key=lambda r: (r[1], r[3], r[4], int(r[5]), int(r[6])))
 
 os.makedirs(os.path.dirname(OUT_CSV), exist_ok=True)

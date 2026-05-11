@@ -1,4 +1,8 @@
 #!/bin/bash
+# Minimal SLURM smoke test: loads the conda env on a debug node and prints
+# torch / CUDA info. No training, no model loading. Use this to verify that
+# a freshly-installed environment actually sees a GPU before submitting any
+# real job.
 #SBATCH -J test_batch_debug
 #SBATCH -p debug
 #SBATCH --gres=gpu:1

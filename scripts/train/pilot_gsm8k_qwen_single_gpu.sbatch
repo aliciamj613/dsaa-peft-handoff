@@ -1,3 +1,7 @@
+# This file is a self-installing heredoc: running it writes the actual
+# sbatch script in-place. The serialized job runs the same 8-config pilot
+# sweep as pilot_gsm8k_qwen.sbatch but as a single sequential job rather
+# than a SLURM array, which is useful when the array partition is busy.
 cat > /hpc2hdd/home/mliu954/projects/dsaa_peft/scripts/train/pilot_gsm8k_qwen_single_gpu.sbatch <<'BASH'
 #!/bin/bash
 #SBATCH -J peft_pilot_qwen_single

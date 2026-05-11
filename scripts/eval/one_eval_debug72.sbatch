@@ -1,4 +1,8 @@
 #!/bin/bash
+# One-row evaluation step of the 72-run debug sweep. Dispatched per manifest
+# row by submit_eval_batch_72.sh; picks the task-specific eval script based
+# on TASK, then writes a *_meta.json that merges the train and eval summaries
+# for that run_id. Skips work if the eval result already exists.
 #SBATCH -J one_eval_dbg72
 #SBATCH -p debug
 #SBATCH --gres=gpu:1
@@ -18,6 +22,8 @@ source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate peft_llm
 set -u
 
+# Force fully-offline mode: HF cache must already contain the base model and
+# tokenizer; otherwise the compute node will hang trying to reach the hub.
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1

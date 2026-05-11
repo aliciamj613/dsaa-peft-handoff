@@ -1,3 +1,10 @@
+"""Generate the run manifest CSV for the 72-run debug sweep.
+
+Each row in the manifest represents one (model x method x task x budget x seed)
+configuration. The companion `submit_train_batch_72.sh` / `submit_eval_batch_72.sh`
+scripts iterate over rows in this CSV and submit a SLURM job per row.
+"""
+
 import csv
 from pathlib import Path
 
@@ -13,6 +20,8 @@ tasks = ["gsm8k", "dialogsum", "squad_v2"]
 budgets = [128, 512, 1024]
 seed = 42
 
+# Per-method learning rates chosen from the pilot sweep. IA3 needs a larger LR
+# because it has far fewer trainable parameters than LoRA-family methods.
 lr_map = {
     "lora": "2e-4",
     "qlora": "1e-4",
@@ -29,6 +38,9 @@ for model_tag, model_name in models:
                 epochs = 2
                 max_length = 768
 
+                # DoRA on the largest SQuAD v2 budget pushes activation memory
+                # past the single-GPU debug-partition limit at 768 tokens, so
+                # shrink the sequence length for just that cell.
                 if method == "dora" and task == "squad_v2" and budget == 1024:
                     max_length = 640
 

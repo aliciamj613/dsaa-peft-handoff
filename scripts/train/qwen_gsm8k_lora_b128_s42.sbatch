@@ -1,4 +1,7 @@
 #!/bin/bash
+# Earliest hand-written training job: Qwen-2.5-3B + LoRA on GSM8K with the
+# 128-example budget, seed 42. Kept around as a minimal reference template;
+# new experiments should use the generated `main_jobs/*.sbatch` files.
 #SBATCH -J qwen_gsm8k_lora_b128_s42
 #SBATCH -p i64m1tga40u
 #SBATCH --gres=gpu:1

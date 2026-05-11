@@ -1,3 +1,11 @@
+"""Evaluate a (base model + optional PEFT adapter) on SQuAD v2.
+
+Computes the official SQuAD-style EM and token-overlap F1 between the model's
+generated answer span and the gold answer. Unanswerable questions are encoded
+as the literal string "unanswerable" in the gold data, so the model is
+prompted to emit that exact token when no answer is supported by the context.
+"""
+
 import os
 import re
 import json
@@ -27,6 +35,11 @@ def parse_args():
 
 
 def normalize_answer(s):
+    """Lowercase, strip punctuation/articles, and collapse whitespace.
+
+    Standard SQuAD answer-normalization so that "The bell" and "bell" score
+    as a match.
+    """
     def remove_articles(text):
         return re.sub(r"\b(a|an|the)\b", " ", text)
     def white_space_fix(text):
@@ -45,9 +58,12 @@ def compute_exact(a_gold, a_pred):
 
 
 def compute_f1(a_gold, a_pred):
+    """Token-overlap F1 between gold and predicted answers (SQuAD definition)."""
     gold_toks = normalize_answer(a_gold).split()
     pred_toks = normalize_answer(a_pred).split()
 
+    # Both sides empty after normalization => trivially correct (e.g. both
+    # are punctuation-only or "the"); both treated as a match.
     if len(gold_toks) == 0 and len(pred_toks) == 0:
         return 1.0
     if len(gold_toks) == 0 or len(pred_toks) == 0:
@@ -64,6 +80,8 @@ def compute_f1(a_gold, a_pred):
 
 
 def build_prompt(context: str, question: str) -> str:
+    # Mirrors the training-time template; explicitly instructs the model to
+    # emit "unanswerable" so SQuAD v2's no-answer class is testable.
     return (
         "### Instruction:\n"
         "Read the context and answer the question. "
@@ -75,6 +93,7 @@ def build_prompt(context: str, question: str) -> str:
 
 
 def chunk_list(lst: List, batch_size: int):
+    """Yield successive `batch_size`-sized slices from `lst`."""
     for i in range(0, len(lst), batch_size):
         yield lst[i:i + batch_size]
 
@@ -83,6 +102,9 @@ def main():
     args = parse_args()
 
     tokenizer = AutoTokenizer.from_pretrained(args.base_model, use_fast=True)
+    # Left padding is required for batched decoder-only generation: padding
+    # has to sit to the left of the prompt so generation continues from the
+    # rightmost real token regardless of sequence length in the batch.
     tokenizer.padding_side = "left"
     if tokenizer.pad_token is None:
         tokenizer.pad_token = tokenizer.eos_token
@@ -94,6 +116,9 @@ def main():
     )
     if args.adapter_path and str(args.adapter_path).lower() != "none":
         model = PeftModel.from_pretrained(model, args.adapter_path)
+    # Propagate the pad token id to both the model config and the generation
+    # config; without this `generate()` will warn and may produce trailing
+    # garbage when the batch contains padded sequences.
     model.config.pad_token_id = tokenizer.pad_token_id
     if hasattr(model, "generation_config") and model.generation_config is not None:
         model.generation_config.pad_token_id = tokenizer.pad_token_id
@@ -138,6 +163,8 @@ def main():
         decoded_batch = tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
         for ex, decoded, prompt in zip(batch, decoded_batch, prompts):
+            # Strip the echoed prompt; fall back to the full decoded text if
+            # the prefix match fails (rare tokenizer round-trip edge case).
             if decoded.startswith(prompt):
                 pred_text = decoded[len(prompt):].strip()
             else:

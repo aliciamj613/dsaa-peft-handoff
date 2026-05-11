@@ -1,3 +1,9 @@
+"""Minimal end-to-end forward pass on the base model.
+
+Used as a sanity check to confirm that the model weights load on GPU and that
+greedy generation works before launching anything heavier (training, eval).
+"""
+
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 

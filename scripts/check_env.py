@@ -1,3 +1,10 @@
+"""Quick smoke test for the training environment.
+
+Verifies that PyTorch sees a CUDA device, that a representative tokenizer
+loads, that the Hugging Face Datasets cache is reachable, and that PEFT is
+importable. Run this once on any new node before launching real training.
+"""
+
 import torch
 from transformers import AutoTokenizer
 from datasets import load_dataset

@@ -1,4 +1,10 @@
 #!/bin/bash
+# Submit a contiguous slice [START..END] (0-indexed, inclusive) of the
+# 72-run debug manifest to SLURM as training jobs. Each row becomes one
+# `one_train_debug72.sbatch` job. Used together with submit_eval_batch_72.sh
+# to drive the full sweep in two phases (train -> eval).
+#
+# Usage: ./submit_train_batch_72.sh <START> <END>
 set -euo pipefail
 
 START=${1:?Need START}

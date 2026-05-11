@@ -1,4 +1,8 @@
 #!/bin/bash
+# Generate the 8 main-experiment sbatch files (2 models x 4 PEFT methods).
+# Each generated job iterates over all tasks/budgets/seeds for its
+# (model, method) cell on a single GPU. Re-run this whenever the inner
+# template needs to change so all 8 stay in sync.
 set -euo pipefail
 
 ROOT=/hpc2hdd/home/mliu954/projects/dsaa_peft

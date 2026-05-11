@@ -1,3 +1,11 @@
+"""Build budgeted SQuAD v2 training splits in instruction-response format.
+
+SQuAD v2 includes unanswerable questions (empty `answers.text` list). Those
+rows are mapped to the literal target string "unanswerable" so that during
+fine-tuning the model learns an explicit no-answer label rather than being
+trained on an empty response. Validation is written out verbatim.
+"""
+
 import os
 import json
 import random
@@ -10,6 +18,7 @@ SEED = 42
 BUDGETS = [128, 512, 2048]
 
 def get_answer(ex):
+    """Return the first gold answer span, or "unanswerable" if none exists."""
     answers = ex["answers"]["text"]
     if len(answers) == 0:
         return "unanswerable"
@@ -39,6 +48,7 @@ def main():
     train_ds = [format_example(x) for x in ds["train"]]
     val_ds = [format_example(x) for x in ds["validation"]]
 
+    # Shuffle once with a fixed seed so each budget is a prefix of the next.
     random.seed(SEED)
     random.shuffle(train_ds)
 

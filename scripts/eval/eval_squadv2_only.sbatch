@@ -1,4 +1,7 @@
 #!/bin/bash
+# Single-run SQuAD v2 evaluation on the debug partition. Caller exports
+# BASE_MODEL, ADAPTER_PATH, OUTFILE; this job loads that adapter on top of
+# the base model and writes EM/F1 plus per-example predictions to OUTFILE.
 #SBATCH -J eval_squadv2_only
 #SBATCH -p debug
 #SBATCH --gres=gpu:1

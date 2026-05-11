@@ -1,3 +1,11 @@
+"""Evaluate a (base model + optional PEFT adapter) on GSM8K.
+
+Generates a short chain-of-reasoning answer per question, extracts the last
+number from both the prediction and the gold answer string, and reports the
+exact-match rate (EM). Per-example predictions are dumped to JSON for error
+analysis.
+"""
+
 import os
 import re
 import json
@@ -26,11 +34,18 @@ def parse_args():
 
 
 def extract_final_number(text: str):
+    """Return the last numeric token in `text` (stripping commas), or None.
+
+    GSM8K gold answers end with `#### <final number>` and model outputs end
+    with a sentence like "the answer is 42"; taking the last number is a robust
+    way to handle both formats.
+    """
     nums = re.findall(r"-?\d+\.?\d*", text.replace(",", ""))
     return nums[-1] if nums else None
 
 
 def build_prompt(question: str) -> str:
+    # Mirrors the training-time template in build_gsm8k_budget.py.
     return (
         "### Instruction:\n"
         "Solve the following math word problem. Show the reasoning briefly and end with the final answer.\n\n"
@@ -40,6 +55,7 @@ def build_prompt(question: str) -> str:
 
 
 def chunk_list(lst: List, batch_size: int):
+    """Yield successive `batch_size`-sized slices from `lst`."""
     for i in range(0, len(lst), batch_size):
         yield lst[i:i + batch_size]
 
@@ -49,6 +65,7 @@ def main():
 
     tokenizer = AutoTokenizer.from_pretrained(args.base_model, use_fast=True)
     if tokenizer.pad_token is None:
+        # Decoder-only LMs typically lack a pad token; reuse EOS for padding.
         tokenizer.pad_token = tokenizer.eos_token
 
     model = AutoModelForCausalLM.from_pretrained(
@@ -56,6 +73,7 @@ def main():
         dtype=torch.float16,
         device_map="auto",
     )
+    # Adapter is optional: allow "none" to evaluate the raw base model.
     if args.adapter_path and str(args.adapter_path).lower() != "none":
         model = PeftModel.from_pretrained(model, args.adapter_path)
     model.eval()
@@ -97,7 +115,9 @@ def main():
         decoded_batch = tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
         for ex, decoded, prompt in zip(batch, decoded_batch, prompts):
-            # 只保留 prompt 之后的生成部分
+            # Drop the echoed prompt so only the generated continuation is
+            # scored. Fall back to the full decoded text if the exact prefix
+            # was lost during tokenizer round-trip.
             if decoded.startswith(prompt):
                 pred_text = decoded[len(prompt):].strip()
             else:

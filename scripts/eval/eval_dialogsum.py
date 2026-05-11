@@ -1,3 +1,12 @@
+"""Evaluate a (base model + optional PEFT adapter) on DialogSum.
+
+Loads the held-out test JSONL written by `scripts/preprocess/build_dialogsum_budget.py`,
+generates a summary per dialogue with greedy decoding, scores it against the
+reference with ROUGE-L, and writes both the averaged metric and per-example
+predictions to a JSON file. `--adapter_path none` (or omitting it) evaluates
+the raw base model so we have a zero-shot baseline.
+"""
+
 import os
 import json
 import math
@@ -25,6 +34,8 @@ def parse_args():
 
 
 def build_prompt(dialogue: str) -> str:
+    # Must match the instruction/response template used during training so the
+    # adapter sees the same prefix distribution it was fine-tuned on.
     return (
         "### Instruction:\n"
         "Summarize the following dialogue concisely.\n\n"
@@ -34,6 +45,7 @@ def build_prompt(dialogue: str) -> str:
 
 
 def chunk_list(lst: List, batch_size: int):
+    """Yield successive `batch_size`-sized slices from `lst`."""
     for i in range(0, len(lst), batch_size):
         yield lst[i:i + batch_size]
 
@@ -43,6 +55,8 @@ def main():
 
     tokenizer = AutoTokenizer.from_pretrained(args.base_model, use_fast=True)
     if tokenizer.pad_token is None:
+        # Many decoder-only LMs (Qwen, Gemma, LLaMA) ship without a pad token;
+        # reuse EOS so right/left padding works during batched generation.
         tokenizer.pad_token = tokenizer.eos_token
 
     model = AutoModelForCausalLM.from_pretrained(
@@ -50,6 +64,8 @@ def main():
         dtype=torch.float16,
         device_map="auto",
     )
+    # "none" lets the launcher template pass a single value for both
+    # baseline (no adapter) and adapter runs.
     if args.adapter_path and str(args.adapter_path).lower() != "none":
         model = PeftModel.from_pretrained(model, args.adapter_path)
     model.eval()
@@ -93,6 +109,10 @@ def main():
         decoded_batch = tokenizer.batch_decode(outputs, skip_special_tokens=True)
 
         for ex, decoded, prompt in zip(batch, decoded_batch, prompts):
+            # `generate` echoes the prompt; strip it so the metric only scores
+            # the newly generated continuation. If decoding lost an exact prefix
+            # match (e.g. due to tokenizer round-trip), fall back to using the
+            # full decoded string.
             if decoded.startswith(prompt):
                 pred_text = decoded[len(prompt):].strip()
             else:

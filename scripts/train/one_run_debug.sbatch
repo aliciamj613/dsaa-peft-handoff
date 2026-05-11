@@ -1,4 +1,7 @@
 #!/bin/bash
+# Train + evaluate a single (model, method, task, budget, seed) configuration
+# end-to-end on the debug partition. All run parameters are read from the
+# environment so the same script can be reused across quick smoke tests.
 #SBATCH -J one_run_debug
 #SBATCH -p debug
 #SBATCH --gres=gpu:1

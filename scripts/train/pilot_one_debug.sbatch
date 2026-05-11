@@ -1,4 +1,7 @@
 #!/bin/bash
+# Train + evaluate one pilot configuration on the debug partition. METHOD,
+# LR, and RUNID are hardcoded near the top of the script and meant to be
+# edited by hand for quick one-off experiments.
 #SBATCH -J pilot_one_debug
 #SBATCH -p debug
 #SBATCH --gres=gpu:1
@@ -24,11 +27,11 @@ mkdir -p /hpc2hdd/home/mliu954/projects/dsaa_peft/logs
 mkdir -p /hpc2hdd/home/mliu954/projects/dsaa_peft/outputs
 mkdir -p /hpc2hdd/home/mliu954/projects/dsaa_peft/results/pilot
 
-# ===== 手动改这三项 =====
+# ===== Edit these three by hand for each debug run =====
 METHOD="dora"
 LR="2e-4"
 RUNID="qwen_gsm8k_dora_b512_s42_lr2e4_debug"
-# =======================
+# =======================================================
 
 OUTDIR=/hpc2hdd/home/mliu954/projects/dsaa_peft/outputs/${RUNID}
 EVALJSON=/hpc2hdd/home/mliu954/projects/dsaa_peft/results/pilot/${RUNID}_eval200.json

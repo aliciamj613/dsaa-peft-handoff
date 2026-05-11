@@ -1,3 +1,10 @@
+"""Build budgeted GSM8K training splits in instruction-response format.
+
+Shuffles the full train split once (fixed seed) and writes the first N rows
+to `train_<N>.jsonl` for each budget N. The test split is dumped verbatim so
+every fine-tuned checkpoint is evaluated on the same questions.
+"""
+
 import os
 import json
 import random
@@ -10,9 +17,13 @@ SEED = 42
 BUDGETS = [128, 512, 2048]
 
 def format_example(ex):
+    """Wrap a raw GSM8K row in the shared instruction-response template.
+
+    `text` is the full training string; `question` / `answer` are kept so
+    that the evaluator can recover the gold answer for metric computation.
+    """
     question = ex["question"].strip()
     answer = ex["answer"].strip()
-    # instruction-response format
     text = (
         "### Instruction:\n"
         "Solve the following math word problem. Show the reasoning briefly and end with the final answer.\n\n"
@@ -27,6 +38,9 @@ def main():
     train_ds = [format_example(x) for x in ds["train"]]
     test_ds = [format_example(x) for x in ds["test"]]
 
+    # Shuffle once so smaller budgets are prefixes of larger ones; this lets
+    # us attribute performance differences to scale rather than to which
+    # examples happened to be drawn.
     random.seed(SEED)
     random.shuffle(train_ds)
 

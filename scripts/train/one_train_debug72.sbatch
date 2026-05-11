@@ -1,4 +1,9 @@
 #!/bin/bash
+# Train one row from the 72-run debug manifest. Dispatched per manifest row
+# by submit_train_batch_72.sh; reads RUN_ID / MODEL_NAME / METHOD / TASK /
+# BUDGET / SEED / LR / EPOCHS / MAX_LENGTH from the environment, picks the
+# matching train_<BUDGET>.jsonl file, and writes the adapter under
+# outputs_72/${RUN_ID}/. Skips work if the adapter already exists.
 #SBATCH -J one_train_dbg72
 #SBATCH -p debug
 #SBATCH --gres=gpu:1
@@ -18,6 +23,7 @@ source "$(conda info --base)/etc/profile.d/conda.sh"
 conda activate peft_llm
 set -u
 
+# Force fully-offline mode; the HF cache must already contain the base model.
 export HF_HUB_OFFLINE=1
 export TRANSFORMERS_OFFLINE=1
 export HF_DATASETS_OFFLINE=1

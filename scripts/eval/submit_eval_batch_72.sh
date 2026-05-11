@@ -1,4 +1,10 @@
 #!/bin/bash
+# Submit a contiguous slice [START..END] (0-indexed, inclusive) of the
+# 72-run debug manifest to SLURM as evaluation jobs. Each row becomes one
+# `one_eval_debug72.sbatch` job. Useful for chunking submissions to stay
+# under the cluster's per-user job-count cap.
+#
+# Usage: ./submit_eval_batch_72.sh <START> <END>
 set -euo pipefail
 
 START=${1:?Need START}
